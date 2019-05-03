@@ -2,7 +2,7 @@ import React from 'react'
 import './SideDrawerToggle.css'
 
 const sideDrawerToggle = props => (
-  <div class="SideDrawerToggle" onClick={props.onClick}>
+  <div className="SideDrawerToggle" onClick={props.onClick}>
     <div />
     <div />
     <div />
