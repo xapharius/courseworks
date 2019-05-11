@@ -18,13 +18,12 @@ class FullPost extends Component {
     axios.delete('/posts/' + id).then(resp => console.log(resp))
   }
 
-  componentDidUpdate = () => {
-    if (this.props.id) {
-      if (
-        !this.state.post ||
-        (this.state.post && this.state.post.id !== this.props.id)
-      ) {
-        this.fetchPost(this.props.id)
+  componentDidMount = () => {
+    console.log(this.props)
+    let id = this.props.match.params.id
+    if (id) {
+      if (!this.state.post || (this.state.post && this.state.post.id !== id)) {
+        this.fetchPost(id)
       }
     }
   }
